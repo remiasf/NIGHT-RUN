@@ -20,7 +20,7 @@ RUN npx prisma generate
 RUN npm run build
 
 # ---- production ----
-FROM node:24-alpine AS production
+FROM node:22-alpine AS production
 
 RUN apk add --no-cache openssl
 
