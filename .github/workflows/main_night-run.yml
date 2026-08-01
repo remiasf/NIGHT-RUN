@@ -59,17 +59,11 @@ jobs:
         with:
           name: node-app
 
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_BAAED56003A84636BD5C19FFAECE90C2 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_53CE6AB0DB8C40FDBB982939B1982AB1 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_D6F60995BEFD4DA0AE83E9DCF0BA610C }}
-
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'NIGHT-RUN'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           slot-name: 'Production'
           package: .
