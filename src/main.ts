@@ -7,9 +7,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: 'https://night-run-six.vercel.app',
+    origin: ['https://night-run-six.vercel.app', 'https://night-run-remiasfs-projects.vercel.app', 'http://localhost:3000', 'https://night-run-git-main-remiasfs-projects.vercel.app', 'https://night-ogw7a1ya3-remiasfs-projects.vercel.app' ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
   });
 
