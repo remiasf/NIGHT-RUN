@@ -1,5 +1,5 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
-import { Car, CarType as PrismaCarType, Prisma } from '@prisma/client';
+import { Car, CarType as PrismaCarType, Prisma } from '../generated/client';
 import { PrismaService } from '../prisma/prisma.service';
 import { CreateCarDto } from './dto/create-car-dto';
 import { GetCarsFilterDto } from './dto/get-cars-filter.dto';
