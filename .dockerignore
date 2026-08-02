@@ -19,4 +19,4 @@ test
 eslint.config.mjs
 .tsbuildinfo
 **/tsconfig.tsbuildinfo
-generated
+/generated

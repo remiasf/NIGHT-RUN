@@ -36,7 +36,6 @@ ARG DATABASE_URL=postgresql://user:pass@localhost:5432/db?schema=public
 ENV DATABASE_URL=$DATABASE_URL
 
 RUN npm ci --omit=dev \
-  && npx prisma generate \
   && npm cache clean --force
 
 COPY --from=builder /app/dist ./dist

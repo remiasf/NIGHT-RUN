@@ -5,3 +5,5 @@ coverage
 .env
 
 /generated/prisma
+src/generated
+*.tsbuildinfo
